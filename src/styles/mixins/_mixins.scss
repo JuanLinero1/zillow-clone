@@ -1,0 +1,13 @@
+@mixin dflex($justify, $align, $gap, $direction, $wrap){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  flex-flow: $direction $wrap;
+}
+
+@mixin font($size, $font, $color){
+  font-size: $size;
+  font-family: $font;
+  color: $color;
+}

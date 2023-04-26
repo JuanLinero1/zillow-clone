@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../../../public/assets/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf");
+}
+@font-face {
+  font-family: "Rufina";
+  src: url("../../../../public/assets/fonts/Rufina/Rufina-Regular.ttf");
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  top: 0px;
+  position: fixed;
+  z-index: 5;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+.header__nav--list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-flow: row nowrap;
+}
+.header__nav--list-item {
+  font-size: 1.1rem;
+  font-family: "Open Sans";
+  color: black;
+  white-space: nowrap;
+}
+.header__nav--list-item:hover {
+  color: rgb(0, 106, 255);
+}
+.header__nav--img img {
+  width: 180px;
+}
+
+.home {
+  background-color: #f9f9fb;
+}
+.home__hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  flex-flow: column wrap;
+  background: url("https://wp-tid.zillowstatic.com/bedrock/app/uploads/sites/5/2022/08/ZG_ZPA_08_21_Americana_ExtFront_1081_1440_desktopWebp-2.webp") no-repeat center center;
+  background-size: cover;
+  padding: 150px 0px 0 0px;
+  height: 550px;
+  width: 100%;
+  position: relative;
+}
+.home__hero-title {
+  font-size: 2.6rem;
+  font-family: "Rufina";
+  color: white;
+  text-shadow: 0px 0px 16px black;
+}
+.home__hero--form {
+  position: relative;
+}
+.home__hero--form-input {
+  width: 48rem;
+  height: 4rem;
+  padding: 2.5rem 2rem;
+  border-radius: 5px;
+}
+.home__hero--form-input::placeholder {
+  font-size: 1.1rem;
+  font-family: "Open Sans";
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+}
+.home__hero--form-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  font-size: 1.5rem;
+  font-family: "Open Sans";
+  color: rgba(0, 0, 0, 0.8);
+}
+.home__products {
+  height: 600px;
+  padding: 0 5rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0px;
+  flex-flow: row nowrap;
+}
+.home__products--images {
+  width: 60%;
+}
+.home__products--images img {
+  width: 100%;
+}
+.home__products--info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  flex-flow: column wrap;
+}
+.home__products--info-title {
+  font-size: 1.4rem;
+  font-family: "Open Sans";
+  color: black;
+  font-weight: 600;
+}
+.home__products--info-subtitle {
+  font-size: 1.2rem;
+  font-family: "Open Sans";
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+.home__products--info-button {
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: rgb(0, 106, 255);
+  font-weight: 600;
+  margin: 10px 0 0 0;
+  padding: 0.8rem 1.2rem;
+  background-color: transparent;
+  border-radius: 7px;
+  border: 2px solid rgb(0, 106, 255);
+}
+.home__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+  flex-flow: row wrap;
+  height: 1000px;
+  padding: 0 4rem;
+}
+.home__container--card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-flow: row wrap;
+  width: 30%;
+  height: 500px;
+  background-color: white;
+  border: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  border: 2px solid lightgray;
+  box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.home__container--card-img {
+  width: 90%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*# sourceMappingURL=main.css.map */

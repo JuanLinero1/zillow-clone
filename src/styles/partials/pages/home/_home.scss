@@ -1,0 +1,105 @@
+@use '../../../mixins/mixins'as mixin;
+@use '../../../partials/components/colors'as color;
+
+.home {
+  background-color: color.$backgroud-color;
+  &__hero {
+    @include mixin.dflex(flex-start, center, 30px, column, wrap);
+    background: url("https://wp-tid.zillowstatic.com/bedrock/app/uploads/sites/5/2022/08/ZG_ZPA_08_21_Americana_ExtFront_1081_1440_desktopWebp-2.webp") no-repeat center center;
+    background-size: cover;
+    padding: 150px 0px 0 0px;
+    height: 550px;
+    width: 100%;
+    position: relative;
+
+    &-title {
+      @include mixin.font(2.6rem, "Rufina", white);
+      text-shadow: 0px 0px 16px black;
+    }
+
+    &--form {
+      position: relative;
+
+      &-input {
+        width: 48rem;
+        height: 4rem;
+        padding: 2.5rem 2rem;
+        border-radius: 5px;
+
+        &::placeholder {
+          @include mixin.font(1.1rem, "Open Sans", rgba(0, 0, 0, .6));
+          font-weight: 600;
+        }
+      }
+
+      &-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        @include mixin.font(1.5rem, "Open Sans", rgba(0, 0, 0, .8));
+      }
+    }
+  }
+
+  &__products {
+    height: 600px;
+    padding: 0 5rem;
+    background-color: white;
+    @include mixin.dflex(space-around, center, 0px, row, nowrap);
+
+    &--images{
+      width: 60%;
+      img{
+        width: 100%
+      }
+    }
+
+    &--info {
+      @include mixin.dflex(center, center, .7rem, column, wrap);
+
+      &-title {
+        @include mixin.font(1.4rem, "Open Sans", black);
+        font-weight: 600;
+      }
+
+      &-subtitle {
+        @include mixin.font(1.2rem, "Open Sans", rgba(0, 0, 0, .5));
+        font-weight: 500
+      }
+
+      &-button {
+        @include mixin.font(1rem, "Open Sans", color.$color-light-blue);
+        font-weight: 600;
+        margin: 10px 0 0 0;
+        padding: .8rem 1.2rem;
+        background-color: transparent;
+        border-radius: 7px;
+        border: 2px solid color.$color-light-blue;
+      }
+    }
+  }
+
+  &__container {
+    @include mixin.dflex(space-around, center, 0, row, wrap);
+    height: 1000px;
+    padding: 0 4rem;
+
+    &--card {
+      @include mixin.dflex(center, center, 0, row, wrap);
+      width: 30%;
+      height: 500px;
+      background-color: white;
+      border: 20px;
+      padding: 3rem 2rem;
+      text-align: center;
+      border: 2px solid lightgray;
+      box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+      &-img {
+        width: 90%;
+      }
+    }
+  }
+}

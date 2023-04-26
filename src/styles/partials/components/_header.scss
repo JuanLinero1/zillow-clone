@@ -1,0 +1,36 @@
+@use '../../mixins/mixins.scss'as mixin;
+@use './_colors.scss'as color;
+@use './_fonts.scss'as font;
+
+.header {
+  @include mixin.dflex(center, center, 0, row, nowrap);
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  top: 0px;
+  position: fixed;
+  z-index: 5;
+
+  &__nav {
+    @include mixin.dflex(space-around, center, 0, row, nowrap);
+    width: 100%;
+
+    &--list {
+      @include mixin.dflex(space-between, center, 30px, row, nowrap);
+
+      &-item{
+        @include mixin.font(1.1rem, "Open Sans", black);
+        white-space: nowrap;
+      }
+      &-item:hover {
+        color: color.$color-light-blue;
+      }
+    }
+
+    &--img {
+      img {
+        width: 180px;
+      }
+    }
+  }
+}
