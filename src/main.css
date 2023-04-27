@@ -279,6 +279,369 @@
   color: white;
 }
 
+.sell {
+  min-height: 1000px;
+  width: 100%;
+  padding: 100px 0 0 0;
+}
+.sell__intro {
+  height: 520px;
+  background: url("/public/assets/images/sell/Hero_Sell_Large_2x.png");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  flex-flow: column nowrap;
+  padding: 50px;
+}
+.sell__intro--title {
+  font-size: 3.4rem;
+  font-family: "Rufina";
+  color: black;
+}
+.sell__intro--subtitle {
+  font-size: 1.2rem;
+  font-family: "Rufina";
+  color: black;
+  font-weight: 400;
+}
+.sell__hero--partner {
+  margin: 4rem 0 0 0;
+  background-color: #f9f9fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-flow: row wrap;
+}
+.sell__hero--partner-info {
+  width: 60%;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-flow: column nowrap;
+}
+.sell__hero--partner-info h1 {
+  font-size: 3rem;
+  font-family: "Rufina";
+  color: black;
+}
+.sell__hero--partner-info-text {
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: rgba(0, 0, 0, 0.9);
+}
+.sell__hero--partner-info-subtitle {
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: rgba(0, 0, 0, 0.9);
+}
+.sell__hero--partner-info-form {
+  position: relative;
+  width: 100%;
+}
+.sell__hero--partner-info-form input {
+  width: 100%;
+  height: 3rem;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+.sell__hero--partner-info-form input:hover {
+  border: 2px solid #62aef7;
+}
+.sell__hero--partner-info-form input:focus {
+  border: 2px solid #62aef7;
+  box-shadow: 0 0 5px 2px rgb(0, 106, 255);
+}
+.sell__hero--partner-info-form-icon {
+  position: absolute;
+  transform: translate(-50%, 50%);
+  right: 0.1rem;
+  color: rgb(0, 106, 255);
+  font-size: 1.5rem;
+}
+.sell__hero--partner-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-flow: row wrap;
+}
+.sell__hero--partner-products div {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.7rem;
+  flex-flow: column nowrap;
+}
+.sell__hero--partner-products div h3 {
+  font-size: 1.2rem;
+  font-family: "Open Sans";
+  color: black;
+}
+.sell__hero--partner-products div p {
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: rgba(0, 0, 0, 0.9);
+}
+.sell__hero--partner-products div span {
+  font-size: 0.7rem;
+  font-family: "Open Sans";
+  color: rgba(0, 0, 0, 0.8);
+}
+.sell__hero--partner-image {
+  width: 40%;
+}
+.sell__hero--partner-image img {
+  width: 100%;
+}
+.sell__hero--agent {
+  display: flex;
+  justify-content: Center;
+  align-items: center;
+  gap: 30px;
+  flex-flow: row wrap;
+  margin: 6rem 0;
+  background-color: #f9f9fb;
+  padding: 4rem 0;
+}
+.sell__hero--agent > div {
+  width: 45%;
+}
+.sell__hero--agent > div > p {
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: rgba(0, 0, 0, 0.8);
+  margin: 20px 0 40px 0;
+}
+.sell__hero--agent > div > button {
+  display: block;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(0, 106, 255);
+  border: none;
+  outline: none;
+}
+.sell__hero--agent > div > a {
+  display: inline-block;
+  margin: 2rem 0;
+  text-decoration: underline;
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: #0D4599;
+  font-weight: 700;
+}
+.sell__hero--agent > div > a:hover {
+  color: black;
+}
+.sell__hero--agent > div > a:visited {
+  color: purple;
+}
+.sell__hero--agent > div > a:visited:hover {
+  color: black;
+}
+.sell__hero--agent h1 {
+  font-size: 2.7rem;
+  font-family: "Rufina";
+  color: "black";
+}
+.sell__hero--agent-image {
+  width: 35%;
+}
+.sell__hero--agent-image img {
+  width: 100%;
+}
+.sell__hero--agent-info-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.sell__hero--agent-info-cards > div {
+  width: 45%;
+}
+.sell__hero--agent-info-cards > div > h3 {
+  font-size: 1.2rem;
+  font-family: "Rufina";
+  color: "black";
+  margin: 0 0 1rem 0;
+}
+.sell__hero--agent-info-cards > div > p {
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: "black";
+  width: 300px;
+}
+.sell__hero--agent-info-cards > div > p a {
+  color: #0D4599;
+  text-decoration: underline;
+}
+.sell__hero--agent-info-cards > div > p a:hover {
+  color: #738fc4;
+}
+.sell__hero--agent-info-cards > div > p a:visited {
+  color: purple;
+}
+.sell__hero--agent-info-cards > div > ul li {
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: "black";
+  width: 17rem;
+}
+.sell__hero--agent-info-cards > div > ul li > span {
+  margin: 10px;
+  font-size: 1.4rem;
+  color: #0D4599;
+}
+.sell__hero--agent-info-cards span {
+  font-size: 0.6rem;
+  font-family: "Open Sans";
+  color: "black";
+}
+.sell__line {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-flow: column nowrap;
+  margin: 10rem 0 5rem 0;
+}
+.sell__line div {
+  width: 9rem;
+  height: 3px;
+  background-color: yellow;
+}
+.sell__resources {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-flow: column nowrap;
+}
+.sell__resources h1 {
+  font-size: 2.2rem;
+  font-family: "Rufina";
+  color: black;
+}
+.sell__resources--start {
+  background: url("public/assets/images/sell/bg-mobile.jpg");
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-flow: column wrap;
+  font-size: 1.2rem;
+  font-family: "Open Sans";
+  color: white;
+}
+.sell__resources--start-form {
+  position: relative;
+}
+.sell__resources--start-form input {
+  width: 50rem;
+  padding: 1rem;
+  height: 4rem;
+  font-size: 1rem;
+}
+.sell__resources--start-form input:hover {
+  border: 2px solid #62aef7;
+}
+.sell__resources--start-form input:focus {
+  border: 2px solid #62aef7;
+  box-shadow: 0 0 5px 2px rgb(0, 106, 255);
+}
+.sell__resources--start-form button {
+  position: absolute;
+  transform: translate(50%, -50%);
+  top: 50%;
+  right: 5rem;
+  height: 60%;
+  padding: 0 1.4rem;
+  background-color: rgb(0, 106, 255);
+  font-weight: 900;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.sell__resources--articles {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Rufina";
+  color: Black;
+}
+.sell__resources--articles h5 {
+  font-size: 1rem;
+  font-family: "Rufina";
+  color: rgba(0, 0, 0, 0.5);
+  margin: 20px 0;
+}
+.sell__resources--articles h5 > a {
+  display: inline-block;
+  text-decoration: underline;
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: #0D4599;
+  font-weight: 700;
+}
+.sell__resources--articles h5 > a:hover {
+  color: black;
+}
+.sell__resources--articles h5 > a:visited {
+  color: purple;
+}
+.sell__resources--articles h5 > a:visited:hover {
+  color: black;
+}
+.sell__resources--articles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-flow: row nowrap;
+  width: 98vw;
+  overflow: hidden;
+}
+.sell__resources--articles-container-card {
+  width: 280px;
+  text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.sell__resources--articles-container-card:hover {
+  background-color: #f9f9fb;
+  cursor: pointer;
+}
+.sell__resources--articles-container-card img {
+  width: 100%;
+}
+.sell__resources--articles-container-card h4, .sell__resources--articles-container-card p {
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: black;
+}
+.sell__resources--articles-container-card h4 {
+  padding: 1rem 1rem 0 1rem;
+}
+
 * {
   margin: 0;
   padding: 0;

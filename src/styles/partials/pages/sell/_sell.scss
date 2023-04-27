@@ -1,0 +1,346 @@
+@use '../../../mixins/mixins'as mixin;
+@use '../../../partials/components/colors'as color;
+@use '../../../partials/components/fonts'as font;
+
+.sell {
+  min-height: 1000px;
+  width: 100%;
+  padding: 100px 0 0 0;
+
+  &__intro {
+    height: 520px;
+    background: url('/public/assets/images/sell/Hero_Sell_Large_2x.png');
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mixin.dflex(flex-start, center, 20px, column, nowrap);
+    padding: 50px;
+
+    &--title {
+      @include mixin.font(3.4rem, "Rufina", black)
+    }
+
+    &--subtitle {
+      @include mixin.font(1.2rem, "Rufina", black);
+      font-weight: 400;
+    }
+  }
+
+  &__hero {
+    &--partner {
+      margin: 4rem 0 0 0;
+      background-color: color.$backgroud-color;
+      @include mixin.dflex(center, center, 0, row, wrap);
+
+      &-info {
+        width: 60%;
+        padding: 0 4rem;
+        @include mixin.dflex(center, flex-start, 1rem, column, nowrap);
+
+        h1 {
+          @include mixin.font(3rem, "Rufina", black)
+        }
+
+        &-text {
+          @include mixin.font(1rem, "Open Sans", rgba(0, 0, 0, .9));
+        }
+
+        &-subtitle {
+          @include mixin.font(1rem, "Open Sans", rgba(0, 0, 0, .9));
+        }
+
+        &-form {
+          position: relative;
+          width: 100%;
+
+          input {
+            width: 100%;
+            height: 3rem;
+            padding: 1rem;
+            border: 1px solid rgba(0, 0, 0, .4);
+            outline: none;
+
+            &:hover {
+              border: 2px solid color.$color-blue;
+            }
+
+            &:focus {
+              border: 2px solid color.$color-blue;
+              box-shadow: 0 0 5px 2px color.$color-light-blue;
+            }
+          }
+
+          &-icon {
+            position: absolute;
+            transform: translate(-50%, 50%);
+            right: .1rem;
+            color: color.$color-light-blue;
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      &-products {
+        @include mixin.dflex(center, center, 3rem, row, wrap);
+
+        div {
+          width: 45%;
+          @include mixin.dflex(center, flex-start, .7rem, column, nowrap);
+
+          h3 {
+            @include mixin.font(1.2rem, "Open Sans", black)
+          }
+
+          p {
+            @include mixin.font(1rem, "Open Sans", rgba(0, 0, 0, .9));
+          }
+
+          span {
+            @include mixin.font(.7rem, "Open Sans", rgba(0, 0, 0, .8));
+
+          }
+        }
+      }
+
+      &-image {
+        width: 40%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    &--agent {
+      @include mixin.dflex(Center, center, 30px, row, wrap);
+      margin: 6rem 0;
+      background-color: color.$backgroud-color;
+      padding: 4rem 0;
+
+      &>div {
+        width: 45%;
+
+        &>p {
+          @include mixin.font(1rem, "Open Sans", rgba(0, 0, 0, .8));
+          margin: 20px 0 40px 0;
+        }
+
+        &>button {
+          display: block;
+          padding: 1rem 3rem;
+          font-size: 1rem;
+          font-weight: 700;
+          border-radius: 5px;
+          color: white;
+          background-color: color.$color-light-blue;
+          border: none;
+          outline: none;
+        }
+
+        &>a {
+          display: inline-block;
+          margin: 2rem 0;
+          text-decoration: underline;
+          @include mixin.font(1rem, "Open Sans", color.$color-link);
+          font-weight: 700;
+
+          &:hover {
+            color: black;
+          }
+
+          &:visited {
+            color: purple;
+
+            &:hover {
+              color: black;
+            }
+          }
+        }
+      }
+
+      h1 {
+        @include mixin.font(2.7rem, "Rufina", "black")
+      }
+
+      &-image {
+        width: 35%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &-info-cards {
+        @include mixin.dflex(center, center, 20px, row, wrap);
+        width: 100%;
+
+        &>div {
+          width: 45%;
+
+          &>h3 {
+            @include mixin.font(1.2rem, "Rufina", "black");
+            margin: 0 0 1rem 0;
+          }
+
+          &>p {
+            @include mixin.font(1rem, "Open Sans", "black");
+            width: 300px;
+
+            a {
+              color: color.$color-link;
+              text-decoration: underline;
+
+              &:hover {
+                color: color.$color-deep-blue;
+              }
+
+              &:visited {
+                color: purple;
+              }
+            }
+          }
+
+          &>ul {
+            li {
+              @include mixin.font(1rem, "Open Sans", "black");
+              width: 17rem;
+
+              &>span {
+                margin: 10px;
+                font-size: 1.4rem;
+                color: color.$color-link;
+              }
+            }
+          }
+        }
+
+        span {
+          @include mixin.font(.6rem, "Open Sans", "black");
+        }
+      }
+    }
+  }
+
+  &__line {
+    width: 100%;
+    @include mixin.dflex(center, center, 0, column, nowrap);
+    margin: 10rem 0 5rem 0;
+
+    div {
+      width: 9rem;
+      height: 3px;
+      background-color: yellow;
+    }
+  }
+
+  &__resources {
+    @include mixin.dflex(center, center, 3rem, column, nowrap);
+
+    h1 {
+      @include mixin.font(2.2rem, "Rufina", black)
+    }
+
+    &--start {
+      background: url("public/assets/images/sell/bg-mobile.jpg");
+      width: 100%;
+      height: 500px;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: cover;
+
+      @include mixin.dflex(center, center, 2rem, column, wrap);
+      @include mixin.font(1.2rem, "Open Sans", white);
+
+      &-form {
+        position: relative;
+
+        input {
+          width: 50rem;
+          padding: 1rem;
+          height: 4rem;
+          font-size: 1rem;
+
+          &:hover {
+            border: 2px solid color.$color-blue;
+          }
+
+          &:focus {
+            border: 2px solid color.$color-blue;
+            box-shadow: 0 0 5px 2px color.$color-light-blue;
+          }
+        }
+
+        button {
+          position: absolute;
+          transform: translate(50%, -50%);
+          top: 50%;
+          right: 5rem;
+          height: 60%;
+          padding: 0 1.4rem;
+          background-color: color.$color-light-blue;
+          font-weight: 900;
+          color: white;
+          outline: none;
+          border: none;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    &--articles {
+      text-align: center;
+      @include mixin.font(1.2rem, "Rufina", Black);
+
+      h5 {
+        @include mixin.font(1rem, "Rufina", rgba(0, 0, 0, .5));
+        margin: 20px 0;
+
+        &>a {
+          display: inline-block;
+          text-decoration: underline;
+          @include mixin.font(1rem, "Open Sans", color.$color-link);
+          font-weight: 700;
+
+          &:hover {
+            color: black;
+          }
+
+          &:visited {
+            color: purple;
+
+            &:hover {
+              color: black;
+            }
+          }
+        }
+      }
+
+      &-container{
+        @include mixin.dflex(center, center, 20px, row, nowrap); 
+        width: 98vw;
+        overflow: hidden;
+
+        &-card{
+          width: 280px;
+          text-align: left;
+          border: 1px solid rgba(0, 0, 0, .3);
+
+          &:hover{
+            background-color: color.$backgroud-color;
+            cursor: pointer;
+          }
+          img{
+            width: 100%;
+          }
+          h4, p{
+            padding: 1rem;
+            @include mixin.font(1rem, "Open Sans", black)
+          }
+          h4{
+            padding: 1rem 1rem 0 1rem; 
+          }
+        }
+      }
+    }
+  }
+}
