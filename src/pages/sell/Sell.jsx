@@ -1,12 +1,18 @@
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card__hero } from "./components/card__hero";
 import { CardArticles } from "./components/Card_articles";
 import { info } from "./components/information";
 import { card__article__information } from "./components/card_articles_information";
 
 const Sell = () => {
+  const [distance, setDistance] = useState(0);
+
+  useEffect(() => {
+    console.log(distance)
+  }, [distance])
+
   return (
     <div className="sell">
       <div className="sell__intro">
@@ -94,7 +100,45 @@ const Sell = () => {
             As you begin the steps to selling, learn what to expect with our{" "}
             <a href="#">Sellers Guide</a>
           </h5>
-          <div className="sell__resources--articles-container">
+          <nav className="sell__resources--articles-nav">
+            <ul className="sell__resources--articles-nav-list">
+              <li 
+                onClick={() => setDistance(0)}
+                className={`sell__resources--articles-nav-list-item`}
+              >
+                Preparing to se
+              </li>
+              <li 
+                onClick={() => setDistance(100)}
+                className={`sell__resources--articles-nav-list-item`}
+              >
+                Timing your scale
+              </li>
+              <li 
+                onClick={() => setDistance(200)}
+                className={`sell__resources--articles-nav-list-item`}
+              >
+                Pricing your home
+              </li>
+              <li 
+                onClick={() => setDistance(300)}
+                className={`sell__resources--articles-nav-list-item`}
+              >
+                Getting noticed
+              </li>
+              <li 
+                onClick={() => setDistance(400)}
+                className={`sell__resources--articles-nav-list-item`}
+              >
+                Offers, closing & moving
+              </li>
+              <div className="inline"></div>
+            </ul>
+          </nav>
+          <div
+            className="sell__resources--articles-container"
+            style={{ transform: `translate(${distance}%)` }}
+          >
             <CardArticles information={card__article__information} />
           </div>
         </div>

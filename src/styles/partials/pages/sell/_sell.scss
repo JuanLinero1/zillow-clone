@@ -288,12 +288,14 @@
     }
 
     &--articles {
+      margin: 3rem 0 0 0;
       text-align: center;
       @include mixin.font(1.2rem, "Rufina", Black);
+      overflow: hidden;
 
       h5 {
         @include mixin.font(1rem, "Rufina", rgba(0, 0, 0, .5));
-        margin: 20px 0;
+        margin: 20px 0 50px 0;
 
         &>a {
           display: inline-block;
@@ -315,29 +317,63 @@
         }
       }
 
-      &-container{
-        @include mixin.dflex(center, center, 20px, row, nowrap); 
-        width: 98vw;
-        overflow: hidden;
+      &-nav {
+        position: relative;
+        width: 100%;
+        @include mixin.dflex(center, center, 0, column, nowrap);
 
-        &-card{
+        &-list {
+          position: absolute;
+          top: 0;
+
+          &-item {
+            cursor: pointer;
+            display: inline;
+            padding: 1.5rem;
+            border: none;
+
+            &:active {
+              border-bottom: 4px solid color.$color-light-blue;
+            }
+          }
+
+          .inline {
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            margin: 1.7rem 0 0 0;
+          }
+        }
+      }
+
+      &-container {
+        @include mixin.dflex(center, center, 20px, row, nowrap);
+        width: 98vw;
+        margin: 5rem 0 0 0;
+        position: relative;
+
+        &-card {
           width: 280px;
           text-align: left;
           border: 1px solid rgba(0, 0, 0, .3);
 
-          &:hover{
+          &:hover {
             background-color: color.$backgroud-color;
             cursor: pointer;
           }
-          img{
+
+          img {
             width: 100%;
           }
-          h4, p{
+
+          h4,
+          p {
             padding: 1rem;
             @include mixin.font(1rem, "Open Sans", black)
           }
-          h4{
-            padding: 1rem 1rem 0 1rem; 
+
+          h4 {
+            padding: 1rem 1rem 0 1rem;
           }
         }
       }
