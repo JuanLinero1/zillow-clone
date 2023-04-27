@@ -6,13 +6,16 @@ import {
 } from "react-router-dom";
 
 import Header from "./components/header";
+import Footer from "./components/footer";
 import Home from "./pages/home/Home";
+
+
 
 function App() {
   const AppWrapper = () => {
     let routes = useRoutes([
       { path: "/", element: <Home /> },
-      //     { path: "About", element: <About /> },
+      // { path: "Sell", element: <Sell /> },
       //     { path: "Project", element: <Project /> },
       //     { path: "Resume", element: <Resume /> },
     ]);
@@ -24,7 +27,7 @@ function App() {
       <Router>
         <Header />
         <AppWrapper />
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </>
   );

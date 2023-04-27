@@ -47,6 +47,77 @@
   width: 180px;
 }
 
+.footer {
+  padding: 1.5rem 2rem 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-flow: column wrap;
+}
+.footer__list--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-flow: row wrap;
+  padding: 2rem 6rem;
+}
+.footer__list--container-item {
+  font-size: 1rem;
+  font-family: "Nunito Sans";
+  color: rgba(0, 0, 0, 0.7);
+}
+.footer__link {
+  text-align: center;
+  margin: 0 0 30px 0;
+  font-size: 1rem;
+  font-family: "Nunito Sans";
+  color: #738fc4;
+}
+.footer__info {
+  font-size: 0.7rem;
+  font-family: "Nunito Sans";
+  color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 0 17rem;
+}
+.footer__info--text {
+  margin: 10px 0;
+  line-height: 1rem;
+}
+.footer__info--text-link {
+  font-size: 0.7rem;
+  font-family: "Nunito Sans";
+  color: #0D4599;
+  text-decoration: underline;
+}
+.footer__info--text-link:visited {
+  color: purple;
+}
+.footer__info--text-link-inline {
+  font-size: 1rem;
+  font-family: "Nunito Sans";
+  color: #0D4599;
+}
+.footer__download img {
+  margin: 0 10px 0 0;
+}
+.footer__social-icon {
+  color: blue;
+  margin: 0 5px;
+  font-size: 30px;
+}
+.footer__social-logo {
+  position: relative;
+  top: 10px;
+  left: -10px;
+  width: 8rem;
+}
+.footer__img {
+  margin: 50px 0 0 0;
+}
+
 .home {
   background-color: #f9f9fb;
 }
@@ -61,7 +132,6 @@
   padding: 150px 0px 0 0px;
   height: 550px;
   width: 100%;
-  position: relative;
 }
 .home__hero-title {
   font-size: 2.6rem;
@@ -70,13 +140,22 @@
   text-shadow: 0px 0px 16px black;
 }
 .home__hero--form {
-  position: relative;
+  position: sticky;
+  top: 10px;
 }
 .home__hero--form-input {
+  font-size: 1.1rem;
+  font-family: "Open Sans";
+  color: rgb(0, 0, 0);
   width: 48rem;
   height: 4rem;
   padding: 2.5rem 2rem;
   border-radius: 5px;
+  outline: none;
+  background-color: #f9f9fb;
+}
+.home__hero--form-input:focus {
+  box-shadow: 0px 0px 5px 3px #62aef7;
 }
 .home__hero--form-input::placeholder {
   font-size: 1.1rem;
@@ -95,17 +174,18 @@
   color: rgba(0, 0, 0, 0.8);
 }
 .home__products {
-  height: 600px;
+  height: 450px;
   padding: 0 5rem;
   background-color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 0px;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
 }
 .home__products--images {
-  width: 60%;
+  width: 65%;
+  min-width: 250px;
 }
 .home__products--images img {
   width: 100%;
@@ -116,6 +196,7 @@
   align-items: center;
   gap: 0.7rem;
   flex-flow: column wrap;
+  text-align: center;
 }
 .home__products--info-title {
   font-size: 1.4rem;
@@ -146,8 +227,7 @@
   align-items: center;
   gap: 0;
   flex-flow: row wrap;
-  height: 1000px;
-  padding: 0 4rem;
+  padding: 100px 3rem;
 }
 .home__container--card {
   display: flex;
@@ -156,16 +236,47 @@
   gap: 0;
   flex-flow: row wrap;
   width: 30%;
-  height: 500px;
+  height: 600px;
   background-color: white;
   border: 20px;
   padding: 3rem 2rem;
   text-align: center;
   border: 2px solid lightgray;
-  box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0px 1px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  transition: all 300ms ease;
+}
+.home__container--card.active {
+  box-shadow: 0 0px 10px 3px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.05);
 }
 .home__container--card-img {
   width: 90%;
+}
+.home__container--card-title {
+  font-size: 1.8rem;
+  font-family: "Rufina";
+  color: black;
+}
+.home__container--card-text {
+  font-size: 1.2rem;
+  font-family: "Nunito Sans";
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0 0 10px 0;
+}
+.home__container--card-button {
+  font-size: 1.1rem;
+  font-family: "Nunito Sans";
+  color: #62aef7;
+  font-weight: 700;
+  padding: 0.8rem 1rem;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #62aef7;
+}
+.home__container--card-button.active {
+  background: rgb(0, 106, 255);
+  color: white;
 }
 
 * {

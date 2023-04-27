@@ -1,0 +1,72 @@
+@use '../../../mixins/mixins'as mixin;
+@use '../../../partials/components/colors'as color;
+@use '../../../partials/components/fonts'as font;
+
+.footer {
+  padding: 1.5rem 2rem 0 2rem;
+  @include mixin.dflex(center, center, 20px, column, wrap);
+
+  &__list--container {
+    @include mixin.dflex(center, center, 1rem, row, wrap);
+    padding: 2rem 6rem;
+
+    &-item {
+      @include mixin.font(1rem, "Nunito Sans", rgba(0, 0, 0, .7));
+    }
+  }
+
+  &__link {
+    text-align: center;
+    margin: 0 0 30px 0;
+    @include mixin.font(1rem, "Nunito Sans", color.$color-deep-blue);
+  }
+
+  &__info {
+    @include mixin.font(.7rem, "Nunito Sans", rgba(0, 0, 0, .7));
+    text-align: center;
+    padding: 0 17rem;
+
+    &--text {
+      margin: 10px 0;
+      line-height: 1rem;
+
+      &-link{
+        @include mixin.font(.7rem, "Nunito Sans", color.$color-link);
+        text-decoration: underline;
+
+        &:visited{
+          color: purple;
+        }
+
+        &-inline{
+          @include mixin.font(1rem, "Nunito Sans", color.$color-link);
+        }
+      }
+    }
+  }
+
+  &__download{
+    img{
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &__social{
+    
+    &-icon{
+      color: blue;
+      margin: 0 5px;
+      font-size: 30px;
+    }
+    &-logo{
+      position: relative;
+      top: 10px;
+      left: -10px;
+      width: 8rem;
+    }
+  }
+
+  &__img{
+    margin: 50px 0 0 0;
+  }
+}

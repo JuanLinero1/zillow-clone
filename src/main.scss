@@ -1,7 +1,9 @@
-@use './styles/partials/components/header';
-@use './styles/partials/components/fonts.scss';
+@use './styles/partials/components/_fonts.scss';
 
+@use './styles/partials/pages/header/_header.scss';
+@use './styles/partials/pages/footer/_footer.scss';
 @use './styles/partials/pages/home/_home.scss';
+
 
 * {
   margin: 0;

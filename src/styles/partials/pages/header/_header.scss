@@ -1,6 +1,6 @@
-@use '../../mixins/mixins.scss'as mixin;
-@use './_colors.scss'as color;
-@use './_fonts.scss'as font;
+@use '../../../mixins/mixins'as mixin;
+@use '../../../partials/components/colors'as color;
+@use '../../../partials/components/fonts'as font;
 
 .header {
   @include mixin.dflex(center, center, 0, row, nowrap);

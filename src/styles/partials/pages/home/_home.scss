@@ -3,6 +3,7 @@
 
 .home {
   background-color: color.$backgroud-color;
+  
   &__hero {
     @include mixin.dflex(flex-start, center, 30px, column, wrap);
     background: url("https://wp-tid.zillowstatic.com/bedrock/app/uploads/sites/5/2022/08/ZG_ZPA_08_21_Americana_ExtFront_1081_1440_desktopWebp-2.webp") no-repeat center center;
@@ -10,7 +11,6 @@
     padding: 150px 0px 0 0px;
     height: 550px;
     width: 100%;
-    position: relative;
 
     &-title {
       @include mixin.font(2.6rem, "Rufina", white);
@@ -18,13 +18,21 @@
     }
 
     &--form {
-      position: relative;
+      position: sticky;
+      top: 10px;
 
       &-input {
+        @include mixin.font(1.1rem, "Open Sans", rgba(0, 0, 0, 1));
         width: 48rem;
         height: 4rem;
         padding: 2.5rem 2rem;
         border-radius: 5px;
+        outline: none;
+        background-color: color.$backgroud-color;
+
+        &:focus{
+          box-shadow: 0px 0px 5px 3px color.$color-blue;
+        }
 
         &::placeholder {
           @include mixin.font(1.1rem, "Open Sans", rgba(0, 0, 0, .6));
@@ -44,13 +52,14 @@
   }
 
   &__products {
-    height: 600px;
+    height:450px;
     padding: 0 5rem;
     background-color: white;
-    @include mixin.dflex(space-around, center, 0px, row, nowrap);
+    @include mixin.dflex(space-around, center, 0px, row, wrap);
 
     &--images{
-      width: 60%;
+      width: 65%;
+      min-width: 250px;
       img{
         width: 100%
       }
@@ -58,6 +67,7 @@
 
     &--info {
       @include mixin.dflex(center, center, .7rem, column, wrap);
+      text-align: center; 
 
       &-title {
         @include mixin.font(1.4rem, "Open Sans", black);
@@ -66,7 +76,7 @@
 
       &-subtitle {
         @include mixin.font(1.2rem, "Open Sans", rgba(0, 0, 0, .5));
-        font-weight: 500
+        font-weight: 500; 
       }
 
       &-button {
@@ -83,22 +93,51 @@
 
   &__container {
     @include mixin.dflex(space-around, center, 0, row, wrap);
-    height: 1000px;
-    padding: 0 4rem;
+    padding: 100px 3rem;
 
     &--card {
       @include mixin.dflex(center, center, 0, row, wrap);
       width: 30%;
-      height: 500px;
+      height: 600px;
       background-color: white;
       border: 20px;
       padding: 3rem 2rem;
       text-align: center;
       border: 2px solid lightgray;
-      box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      box-shadow: 0 0px 1px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 10px;
+      transition: all 300ms ease;
+      
+      &.active{
+        box-shadow: 0 0px 10px 3px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+        transform: scale(1.05);
+      }
 
       &-img {
         width: 90%;
+      }
+
+      &-title{
+        @include mixin.font(1.8rem, "Rufina", black)
+      }
+
+      &-text{
+        @include mixin.font(1.2rem, "Nunito Sans", rgba(0, 0, 0, .7));
+        margin: 0 0 10px 0; 
+      }
+
+      &-button{
+        @include mixin.font(1.1rem, "Nunito Sans", color.$color-blue); 
+        font-weight: 700;
+        padding: .8rem 1rem;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid color.$color-blue;
+
+        &.active{
+          background: color.$color-light-blue;
+          color: white;
+        }
       }
     }
   }
