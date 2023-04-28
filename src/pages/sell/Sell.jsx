@@ -7,11 +7,8 @@ import { info } from "./components/information";
 import { card__article__information } from "./components/card_articles_information";
 
 const Sell = () => {
-  const [distance, setDistance] = useState(0);
-
-  useEffect(() => {
-    console.log(distance)
-  }, [distance])
+  const [prev, setPrev] = useState(0);
+  const [curr, setCurr] = useState(4)
 
   return (
     <div className="sell">
@@ -102,32 +99,47 @@ const Sell = () => {
           </h5>
           <nav className="sell__resources--articles-nav">
             <ul className="sell__resources--articles-nav-list">
-              <li 
-                onClick={() => setDistance(0)}
+              <li
+                onClick={() => {
+                  setPrev(0)
+                  setCurr(4)
+                }}                
                 className={`sell__resources--articles-nav-list-item`}
               >
                 Preparing to se
               </li>
-              <li 
-                onClick={() => setDistance(100)}
+              <li
+                onClick={() => {
+                  setPrev(5)
+                  setCurr(9)
+                }}
                 className={`sell__resources--articles-nav-list-item`}
               >
                 Timing your scale
               </li>
-              <li 
-                onClick={() => setDistance(200)}
+              <li
+                onClick={() => {
+                  setPrev(10)
+                  setCurr(14)
+                }}
                 className={`sell__resources--articles-nav-list-item`}
               >
                 Pricing your home
               </li>
-              <li 
-                onClick={() => setDistance(300)}
+              <li
+                onClick={() => {
+                  setPrev(15)
+                  setCurr(19)
+                }}
                 className={`sell__resources--articles-nav-list-item`}
               >
                 Getting noticed
               </li>
-              <li 
-                onClick={() => setDistance(400)}
+              <li
+                onClick={() => {
+                  setPrev(20)
+                  setCurr(24)
+                }}
                 className={`sell__resources--articles-nav-list-item`}
               >
                 Offers, closing & moving
@@ -135,11 +147,8 @@ const Sell = () => {
               <div className="inline"></div>
             </ul>
           </nav>
-          <div
-            className="sell__resources--articles-container"
-            style={{ transform: `translate(${distance}%)` }}
-          >
-            <CardArticles information={card__article__information} />
+          <div className="sell__resources--articles-container">
+            <CardArticles information={card__article__information} index={{prev, curr}} />
           </div>
         </div>
       </div>

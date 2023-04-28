@@ -288,10 +288,10 @@
     }
 
     &--articles {
+      @include mixin.font(1.2rem, "Rufina", Black);
       margin: 3rem 0 0 0;
       text-align: center;
-      @include mixin.font(1.2rem, "Rufina", Black);
-      overflow: hidden;
+      overflow-x: hidden;
 
       h5 {
         @include mixin.font(1rem, "Rufina", rgba(0, 0, 0, .5));
@@ -318,9 +318,10 @@
       }
 
       &-nav {
+        @include mixin.dflex(center, center, 0, column, nowrap);
         position: relative;
         width: 100%;
-        @include mixin.dflex(center, center, 0, column, nowrap);
+        padding: 0 3rem;
 
         &-list {
           position: absolute;
@@ -353,7 +354,7 @@
         position: relative;
 
         &-card {
-          width: 280px;
+          min-width: 200px;
           text-align: left;
           border: 1px solid rgba(0, 0, 0, .3);
 

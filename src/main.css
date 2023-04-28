@@ -583,12 +583,12 @@
   border-radius: 5px;
 }
 .sell__resources--articles {
-  margin: 3rem 0 0 0;
-  text-align: center;
   font-size: 1.2rem;
   font-family: "Rufina";
   color: Black;
-  overflow: hidden;
+  margin: 3rem 0 0 0;
+  text-align: center;
+  overflow-x: hidden;
 }
 .sell__resources--articles h5 {
   font-size: 1rem;
@@ -614,13 +614,14 @@
   color: black;
 }
 .sell__resources--articles-nav {
-  position: relative;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0;
   flex-flow: column nowrap;
+  position: relative;
+  width: 100%;
+  padding: 0 3rem;
 }
 .sell__resources--articles-nav-list {
   position: absolute;
@@ -652,7 +653,7 @@
   position: relative;
 }
 .sell__resources--articles-container-card {
-  width: 280px;
+  min-width: 200px;
   text-align: left;
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
