@@ -21,6 +21,29 @@
       &-item{
         @include mixin.font(1.1rem, "Open Sans", black);
         white-space: nowrap;
+        &.active{
+          display: block;
+        }
+        &.inactive{
+          display: none;
+        }
+        img {
+          width: 50px;
+          background-color: lightgray;
+          border-radius: 50%;
+        }
+
+        &-drop{
+          position: relative;
+          &-menu{
+            position: absolute;
+            bottom: -7rem;
+            left: -15rem;
+            background-color: white;
+            max-width: 22rem;
+            padding: 1rem;
+          }
+        }
       }
       &-item:hover {
         color: color.$color-light-blue;

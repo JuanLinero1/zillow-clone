@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import SignIn from "../pages/sign-in/signIn";
 
 const header = () => {
+  const [condition, setCondition] = useState(false);
+  const [logCondition, setLogCondition] = useState(false);
+  const [email, setEmail] = useState("");
+  console.log(email)
+
   return (
     <header className="header">
       <nav className="header__nav">
@@ -37,11 +43,41 @@ const header = () => {
           <a className="header__nav--list-item" href="#">
             <li>Help</li>
           </a>
-          <a className="header__nav--list-item" href="#">
-            <li>Sign In</li>
+          <a
+            className={`header__nav--list-item ${
+              !logCondition ? "active" : "inactive"
+            }`}
+            href="#"
+          >
+            <li
+              onClick={() => {
+                setCondition(true);
+              }}
+            >
+              Sign In
+            </li>
+          </a>
+          <a
+            className={`header__nav--list-item ${
+              logCondition ? "active" : "inactive"
+            }`}
+            href="#"
+          >
+            <li className="header__nav--list-item-drop">
+              <div className="header__nav--list-item-drop-menu">
+                <h4>welcome, this is your information</h4>
+                email: {email}
+              </div>
+              <img src={`https://robohash.org/${email}`} alt="profile image" />
+            </li>
           </a>
         </ul>
       </nav>
+      <SignIn
+        setEmail={setEmail}
+        logCondition={setLogCondition}
+        condition={{ setCondition, condition }}
+      />
     </header>
   );
 };

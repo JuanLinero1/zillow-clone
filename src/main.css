@@ -40,6 +40,28 @@
   color: black;
   white-space: nowrap;
 }
+.header__nav--list-item.active {
+  display: block;
+}
+.header__nav--list-item.inactive {
+  display: none;
+}
+.header__nav--list-item img {
+  width: 50px;
+  background-color: lightgray;
+  border-radius: 50%;
+}
+.header__nav--list-item-drop {
+  position: relative;
+}
+.header__nav--list-item-drop-menu {
+  position: absolute;
+  bottom: -7rem;
+  left: -15rem;
+  background-color: white;
+  max-width: 22rem;
+  padding: 1rem;
+}
 .header__nav--list-item:hover {
   color: rgb(0, 106, 255);
 }
@@ -673,6 +695,122 @@
 }
 .sell__resources--articles-container-card h4 {
   padding: 1rem 1rem 0 1rem;
+}
+
+.sign {
+  position: fixed;
+  height: 90%;
+  width: 30%;
+  transform: translate(50%, -50%);
+  background: white;
+  top: 50%;
+  left: 20%;
+  color: black;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 3rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+.sign.active {
+  display: block;
+}
+.sign.inactive {
+  display: none;
+}
+.sign__icon {
+  position: absolute;
+  right: 20px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.sign__icon:hover {
+  background-color: lightgray;
+  border-radius: 50%;
+}
+.sign__option {
+  width: 100%;
+  height: 3rem;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 20px 0 0 0;
+}
+.sign__option--button {
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
+.sign__option--button:focus {
+  border-bottom: 3px solid #62aef7;
+}
+.sign h2 {
+  text-align: center;
+  font-family: "Rufina";
+}
+.sign form {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 1rem;
+}
+.sign form.active {
+  display: block;
+}
+.sign form.inactive {
+  display: none;
+}
+.sign form label {
+  margin-top: 20px;
+}
+.sign form input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  margin: 5px 0;
+  border: 1px solid black;
+}
+.sign form button {
+  background-color: #006aff;
+  color: white;
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  width: 100%;
+  margin: 20px 0 0 0;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+.sign form button:hover {
+  background-color: #0D4599;
+}
+.sign form ul {
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Open Sans";
+  margin: 0 0 5px 0;
+}
+.sign__link {
+  margin: 20px 0 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign__link a {
+  color: #0D4599;
+  transition: all 0.1s ease;
+}
+.sign__link a:hover {
+  color: rgb(0, 106, 255);
+  text-decoration: underline;
+}
+.sign label {
+  display: block;
 }
 
 * {
