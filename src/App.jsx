@@ -9,6 +9,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import Home from "./pages/home/Home";
 import Sell from "./pages/sell/Sell";
+import Buy from "./pages/buy/Buy";
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
     let routes = useRoutes([
       { path: "/", element: <Home /> },
       { path: "/Sell", element: <Sell /> },
-      //     { path: "Project", element: <Project /> },
+      { path: "/Buy", element: <Buy /> },
       //     { path: "Resume", element: <Resume /> },
     ]);
     return routes;

@@ -11,7 +11,7 @@ const header = () => {
     <header className="header">
       <nav className="header__nav">
         <ul className="header__nav--list">
-          <a className="header__nav--list-item" href="#">
+          <a className="header__nav--list-item" href="/Buy">
             <li>Buy</li>
           </a>
           <a className="header__nav--list-item" href="#">
@@ -28,10 +28,10 @@ const header = () => {
           </a>
         </ul>
         <figure className="header__nav--img">
-          <img
+          <a href="/">          <img
             src="../../public/assets/images/home/z-logo-default.svg "
             alt="Zillow Logo"
-          />
+          /></a>
         </figure>
         <ul className="header__nav--list">
           <a className="header__nav--list-item" href="#">

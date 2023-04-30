@@ -1,11 +1,7 @@
 import React, { useEffect } from "react";
 
 export const CardArticles = (props) => {
-  console.log(props.index.prev)
-  
-  useEffect(() => {
-    console.log(props.index.prev, props.index.curr)
-  }, [props.index.prev, props.index.curr])
+
   return (
     <>
       {props.information.slice(props.index.prev, props.index.curr).map((item, id) => {
