@@ -14,13 +14,13 @@ const header = () => {
           <a className="header__nav--list-item" href="/Buy">
             <li>Buy</li>
           </a>
-          <a className="header__nav--list-item" href="#">
+          <a className="header__nav--list-item" href="/Buy">
             <li>Rent</li>
           </a>
           <a className="header__nav--list-item" href="/Sell">
             <li>Sell</li>
           </a>
-          <a className="header__nav--list-item" href="#">
+          <a className="header__nav--list-item" href="/Home-Loans">
             <li>Home Loans</li>
           </a>
           <a className="header__nav--list-item" href="#">

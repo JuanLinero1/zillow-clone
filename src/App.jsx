@@ -10,7 +10,7 @@ import Footer from "./components/footer";
 import Home from "./pages/home/Home";
 import Sell from "./pages/sell/Sell";
 import Buy from "./pages/buy/Buy";
-
+import Loans from "./pages/loans/Loans";
 
 function App() {
   const AppWrapper = () => {
@@ -18,7 +18,7 @@ function App() {
       { path: "/", element: <Home /> },
       { path: "/Sell", element: <Sell /> },
       { path: "/Buy", element: <Buy /> },
-      //     { path: "Resume", element: <Resume /> },
+      { path: "/Home-Loans", element: <Loans /> },
     ]);
     return routes;
   };

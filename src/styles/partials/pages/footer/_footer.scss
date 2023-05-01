@@ -12,6 +12,10 @@
 
     &-item {
       @include mixin.font(1rem, "Nunito Sans", rgba(0, 0, 0, .7));
+
+      a:hover{
+        text-decoration: underline;
+      }
     }
   }
 

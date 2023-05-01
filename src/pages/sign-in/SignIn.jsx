@@ -24,7 +24,7 @@ const signIn = (props) => {
 
     if (result) {
       props.logCondition(true)
-      props.setEmail(user.email)
+      props.setEmail  (user.email)
     } else {
       alert("We could not find the user email")
     }

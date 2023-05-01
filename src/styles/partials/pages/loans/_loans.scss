@@ -1,0 +1,384 @@
+@use '../../../mixins/mixins'as mixin;
+@use '../../../partials/components/colors'as color;
+@use '../../../partials/components/fonts'as font;
+
+.loans {
+  min-height: 100vh;
+  padding: 100px 0 0 0;
+  width: 100%;
+
+  &__hero {
+    background: url("https://blog-media.dev.zg-core.com/bedrock/app/uploads/sites/11/2022/10/hero.png") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--inner {
+      height: 80%;
+      width: 70%;
+      background-color: white;
+      @include mixin.dflex(center, center, 30px, column, nowrap);
+
+      img {
+        width: 18.75rem;
+      }
+
+      h1 {
+        @include mixin.font(3rem, "Rufina", black);
+        text-align: center;
+        width: 60%;
+      }
+
+      &-line {
+        width: 150px;
+        height: 2px;
+        background-color: orange;
+      }
+
+      p {
+        @include mixin.font(1rem, "Open Sans", rgba(0, 0, 0, .7));
+        width: 60%;
+        text-align: center;
+      }
+
+      button {
+        padding: 10px 20px;
+        @include mixin.font(1rem, "Open Sans", white);
+        font-weight: 700;
+        background-color: color.$color-button;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: -10px;
+      }
+
+      a {
+        @include mixin.font(1rem, "Open Sans", color.$color-link);
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__product {
+    margin: 30px 0 0 0;
+    text-align: center;
+
+    h1 {
+      @include mixin.font(2.5rem, "Rufina", black);
+    }
+
+    h5 {
+      @include mixin.font(1rem, "Open Sans", rgba(0, 0, 0, .7));
+      font-weight: 500;
+    }
+
+    &--carousel {
+      padding: 2rem 10rem;
+
+      &-wrapper {
+        &-card {
+          position: relative;
+          background-color: rgb(242, 250, 255);
+          width: 100%;
+          height: 250px;
+          padding: 30px 0;
+
+          div {
+            padding: 0 30px;
+            margin: 0 auto;
+            display: flex;
+            align-items: start;
+            flex-flow: column nowrap;
+          }
+
+          &-img {
+            position: absolute;
+            top: -10%;
+            right: 0;
+          }
+
+          &-title {
+            text-align: left;
+          }
+
+          &-review {
+            margin: 10px 0 10px 0;
+          }
+
+          &-text {
+            width: 70%;
+            text-align: left;
+          }
+
+          &-name {
+            text-align: right;
+            font-weight: 700 !important;
+            margin: 20px 0 0 0;
+          }
+        }
+      }
+
+
+      button {
+        background-color: transparent;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, .5);
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin: 30px;
+        transition: all 100ms ease;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: rgb(242, 250, 255);
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, .7);
+        }
+      }
+
+    }
+
+    &--options {
+      &-carousel {
+        button {
+          background-color: transparent;
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, .5);
+          padding: 10px 20px;
+          font-size: 1rem;
+          margin: 30px;
+          transition: all 100ms ease;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: rgb(242, 250, 255);
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, .7);
+          }
+
+        }
+
+        &-wrapper {
+          &-item {
+            &-container {
+              @include mixin.dflex(center, center, 30px, row, wrap);
+              margin: 50px 0 0 0;
+
+              &-card {
+                @include mixin.dflex("", "", 15px, column, nowrap);
+                @include mixin.font(1rem, "Open Sans", black);
+                padding: 20px;
+                border: 1px solid rgba(0, 0, 0, .7);
+                border-radius: 5px;
+                text-align: start;
+                height: 20rem;
+                max-width: 300px;
+
+                h5 {
+                  @include mixin.font(1.1rem, "Open Sans", black);
+                }
+
+                span {
+                  color: color.$color-blue;
+                  margin: 0 10px 0 0;
+                }
+              }
+            }
+
+            &-info {
+              margin: 30px 0 0 0;
+              @include mixin.dflex(center, center, 50px, row, wrap);
+              width: 100%;
+              padding: 20px 200px;
+
+              &-content {
+                text-align: left;
+                width: 40%;
+
+                h3 {
+                  width: 20rem;
+                  @include mixin.font(1.7rem, "Rufina", rgba(0, 0, 0, 1));
+                }
+
+                .inline {
+                  width: 8rem;
+                  height: 2px;
+                  background-color: orange;
+                  margin: 10px 0;
+                }
+
+                p {
+                  @include mixin.font(1rem, "Open Sans", rgba(0, 0, 0, .7));
+                }
+
+                button {
+                  @include mixin.font(1rem, "Open Sans", white);
+                  margin: 30px 0 0 0;
+                  padding: 10px 20px;
+                  background-color: color.$color-button;
+                  font-weight: 700;
+                  border: none;
+                  border-radius: 5px;
+                  outline: none;
+                  box-shadow: none;
+                  cursor: pointer;
+
+                  &:hover {
+                    background-color: color.$color-link;
+                    box-shadow: none;
+                  }
+                }
+              }
+
+              figure {
+                width: 50%;
+
+                img {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &--figure {
+      width: 100%;
+      height: 300px;
+      background: url("https://blog-media.dev.zg-core.com/bedrock/app/uploads/sites/11/2022/10/lower.png");
+      margin: 100px 0 30px 0;
+    }
+
+    &--finance {
+      h3 {
+        @include mixin.font(1.1rem, "Open Sans", rgba(0, 0, 0, .7));
+        font-weight: 500;
+        margin: 24px 0 0 0;
+      }
+
+      &-container {
+        @include mixin.dflex(center, center, 10px, column, wrap);
+
+        &-top {
+          width: 70%;
+          border: 2px solid rgba(0, 0, 0, .2);
+            padding: 1rem;
+          margin: 4rem 0 0 0;
+
+          &>div {
+            @include mixin.dflex(space-around, center, 10px, row, wrap);
+          }
+
+          &-info {
+            text-align: left;
+
+            h2 {
+              @include mixin.font(1.6rem, "Rufina", rgba(0, 0, 0, 1));
+            }
+
+            h3 {
+              @include mixin.font(1.2 rem, "Rufina", rgba(0, 0, 0, 1))
+            }
+
+            p {
+              width: 350px;
+              @include mixin.font(.95rem, "Open Sans", rgba(0, 0, 0, 1));
+            }
+
+            .inline {
+              margin: 1rem 0;
+              background-color: orange;
+              height: 2px;
+              width: 8rem;
+            }
+          }
+
+          button {
+            padding: 12px 10%;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 100ms ease;
+
+            &:first-child {
+              background-color: color.$color-button;
+              color: white;
+              &:hover{
+                background-color: color.$color-link;
+              }
+            }
+
+            &:last-child {
+              background-color: white;
+              color: color.$color-button;
+              border: 1px solid color.$color-button;
+              &:hover{
+                background-color: rgb(242, 250, 255); 
+                color: color.$color-link; 
+              }
+            }
+          }
+        }
+
+        &-bottom {
+          @include mixin.dflex(center, center, 20px, row, wrap);
+          padding: 30px;
+
+          &>div {
+            border: 2px solid rgba(0, 0, 0, .2);
+            width: 460px;
+            height: 500px;
+            text-align: left;
+            padding: 1rem;
+            @include mixin.dflex(center, center, 0px, column, nowrap);
+
+            figure {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 0 0 30px 0;
+            }
+
+            h1 {
+              @include mixin.font(1.4rem, "Rufina", rgba(0, 0, 0, 1));
+              margin: 0 0 -25px 0;
+            }
+
+            .inline{
+              background-color: orange;
+              height: 2px;
+              width: 8rem;
+              margin: 1rem 0;
+            }
+            p{
+              @include mixin.font(.95rem, "Open Sans", rgba(0, 0, 0, 1));
+            }
+            button{
+              padding: 10px 25%;
+              @include mixin.font(1rem, "Open Sans", color.$color-button);
+              font-weight: 700;
+              margin: 20px 0;
+              background-color: transparent;
+              border: 1px solid color.$color-button;
+              border-radius: 5px;
+              outline: none;
+              transition: all 100ms ease;
+              &:hover{
+                background-color: rgb(242, 250, 255);
+                color: color.$color-link;
+                cursor: pointer;
+              }
+            }
+            &>img{
+              margin: 0 auto;
+              width: 12rem;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

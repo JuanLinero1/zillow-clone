@@ -90,6 +90,9 @@
   font-family: "Nunito Sans";
   color: rgba(0, 0, 0, 0.7);
 }
+.footer__list--container-item a:hover {
+  text-decoration: underline;
+}
 .footer__link {
   text-align: center;
   margin: 0 0 30px 0;
@@ -852,6 +855,386 @@
 }
 .buy__content--product-card-info {
   padding: 0.4rem 1rem;
+}
+
+.loans {
+  min-height: 100vh;
+  padding: 100px 0 0 0;
+  width: 100%;
+}
+.loans__hero {
+  background: url("https://blog-media.dev.zg-core.com/bedrock/app/uploads/sites/11/2022/10/hero.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loans__hero--inner {
+  height: 80%;
+  width: 70%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-flow: column nowrap;
+}
+.loans__hero--inner img {
+  width: 18.75rem;
+}
+.loans__hero--inner h1 {
+  font-size: 3rem;
+  font-family: "Rufina";
+  color: black;
+  text-align: center;
+  width: 60%;
+}
+.loans__hero--inner-line {
+  width: 150px;
+  height: 2px;
+  background-color: orange;
+}
+.loans__hero--inner p {
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: rgba(0, 0, 0, 0.7);
+  width: 60%;
+  text-align: center;
+}
+.loans__hero--inner button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: white;
+  font-weight: 700;
+  background-color: #006aff;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: -10px;
+}
+.loans__hero--inner a {
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: #0D4599;
+  font-weight: 700;
+}
+.loans__product {
+  margin: 30px 0 0 0;
+  text-align: center;
+}
+.loans__product h1 {
+  font-size: 2.5rem;
+  font-family: "Rufina";
+  color: black;
+}
+.loans__product h5 {
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+}
+.loans__product--carousel {
+  padding: 2rem 10rem;
+}
+.loans__product--carousel-wrapper-card {
+  position: relative;
+  background-color: rgb(242, 250, 255);
+  width: 100%;
+  height: 250px;
+  padding: 30px 0;
+}
+.loans__product--carousel-wrapper-card div {
+  padding: 0 30px;
+  margin: 0 auto;
+  display: flex;
+  align-items: start;
+  flex-flow: column nowrap;
+}
+.loans__product--carousel-wrapper-card-img {
+  position: absolute;
+  top: -10%;
+  right: 0;
+}
+.loans__product--carousel-wrapper-card-title {
+  text-align: left;
+}
+.loans__product--carousel-wrapper-card-review {
+  margin: 10px 0 10px 0;
+}
+.loans__product--carousel-wrapper-card-text {
+  width: 70%;
+  text-align: left;
+}
+.loans__product--carousel-wrapper-card-name {
+  text-align: right;
+  font-weight: 700 !important;
+  margin: 20px 0 0 0;
+}
+.loans__product--carousel button {
+  background-color: transparent;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 30px;
+  transition: all 100ms ease;
+  border-radius: 5px;
+}
+.loans__product--carousel button:hover {
+  background-color: rgb(242, 250, 255);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.7);
+}
+.loans__product--options-carousel button {
+  background-color: transparent;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 30px;
+  transition: all 100ms ease;
+  border-radius: 5px;
+}
+.loans__product--options-carousel button:hover {
+  background-color: rgb(242, 250, 255);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.7);
+}
+.loans__product--options-carousel-wrapper-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-flow: row wrap;
+  margin: 50px 0 0 0;
+}
+.loans__product--options-carousel-wrapper-item-container-card {
+  display: flex;
+  justify-content: "";
+  align-items: "";
+  gap: 15px;
+  flex-flow: column nowrap;
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: black;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  text-align: start;
+  height: 20rem;
+  max-width: 300px;
+}
+.loans__product--options-carousel-wrapper-item-container-card h5 {
+  font-size: 1.1rem;
+  font-family: "Open Sans";
+  color: black;
+}
+.loans__product--options-carousel-wrapper-item-container-card span {
+  color: #62aef7;
+  margin: 0 10px 0 0;
+}
+.loans__product--options-carousel-wrapper-item-info {
+  margin: 30px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-flow: row wrap;
+  width: 100%;
+  padding: 20px 200px;
+}
+.loans__product--options-carousel-wrapper-item-info-content {
+  text-align: left;
+  width: 40%;
+}
+.loans__product--options-carousel-wrapper-item-info-content h3 {
+  width: 20rem;
+  font-size: 1.7rem;
+  font-family: "Rufina";
+  color: rgb(0, 0, 0);
+}
+.loans__product--options-carousel-wrapper-item-info-content .inline {
+  width: 8rem;
+  height: 2px;
+  background-color: orange;
+  margin: 10px 0;
+}
+.loans__product--options-carousel-wrapper-item-info-content p {
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: rgba(0, 0, 0, 0.7);
+}
+.loans__product--options-carousel-wrapper-item-info-content button {
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: white;
+  margin: 30px 0 0 0;
+  padding: 10px 20px;
+  background-color: #006aff;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+.loans__product--options-carousel-wrapper-item-info-content button:hover {
+  background-color: #0D4599;
+  box-shadow: none;
+}
+.loans__product--options-carousel-wrapper-item-info figure {
+  width: 50%;
+}
+.loans__product--options-carousel-wrapper-item-info figure img {
+  width: 100%;
+}
+.loans__product--figure {
+  width: 100%;
+  height: 300px;
+  background: url("https://blog-media.dev.zg-core.com/bedrock/app/uploads/sites/11/2022/10/lower.png");
+  margin: 100px 0 30px 0;
+}
+.loans__product--finance h3 {
+  font-size: 1.1rem;
+  font-family: "Open Sans";
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  margin: 24px 0 0 0;
+}
+.loans__product--finance-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-flow: column wrap;
+}
+.loans__product--finance-container-top {
+  width: 70%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  margin: 4rem 0 0 0;
+}
+.loans__product--finance-container-top > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  flex-flow: row wrap;
+}
+.loans__product--finance-container-top-info {
+  text-align: left;
+}
+.loans__product--finance-container-top-info h2 {
+  font-size: 1.6rem;
+  font-family: "Rufina";
+  color: rgb(0, 0, 0);
+}
+.loans__product--finance-container-top-info h3 {
+  font-size: 1.2 rem;
+  font-family: "Rufina";
+  color: rgb(0, 0, 0);
+}
+.loans__product--finance-container-top-info p {
+  width: 350px;
+  font-size: 0.95rem;
+  font-family: "Open Sans";
+  color: rgb(0, 0, 0);
+}
+.loans__product--finance-container-top-info .inline {
+  margin: 1rem 0;
+  background-color: orange;
+  height: 2px;
+  width: 8rem;
+}
+.loans__product--finance-container-top button {
+  padding: 12px 10%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 100ms ease;
+}
+.loans__product--finance-container-top button:first-child {
+  background-color: #006aff;
+  color: white;
+}
+.loans__product--finance-container-top button:first-child:hover {
+  background-color: #0D4599;
+}
+.loans__product--finance-container-top button:last-child {
+  background-color: white;
+  color: #006aff;
+  border: 1px solid #006aff;
+}
+.loans__product--finance-container-top button:last-child:hover {
+  background-color: rgb(242, 250, 255);
+  color: #0D4599;
+}
+.loans__product--finance-container-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-flow: row wrap;
+  padding: 30px;
+}
+.loans__product--finance-container-bottom > div {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  width: 460px;
+  height: 500px;
+  text-align: left;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  flex-flow: column nowrap;
+}
+.loans__product--finance-container-bottom > div figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 30px 0;
+}
+.loans__product--finance-container-bottom > div h1 {
+  font-size: 1.4rem;
+  font-family: "Rufina";
+  color: rgb(0, 0, 0);
+  margin: 0 0 -25px 0;
+}
+.loans__product--finance-container-bottom > div .inline {
+  background-color: orange;
+  height: 2px;
+  width: 8rem;
+  margin: 1rem 0;
+}
+.loans__product--finance-container-bottom > div p {
+  font-size: 0.95rem;
+  font-family: "Open Sans";
+  color: rgb(0, 0, 0);
+}
+.loans__product--finance-container-bottom > div button {
+  padding: 10px 25%;
+  font-size: 1rem;
+  font-family: "Open Sans";
+  color: #006aff;
+  font-weight: 700;
+  margin: 20px 0;
+  background-color: transparent;
+  border: 1px solid #006aff;
+  border-radius: 5px;
+  outline: none;
+  transition: all 100ms ease;
+}
+.loans__product--finance-container-bottom > div button:hover {
+  background-color: rgb(242, 250, 255);
+  color: #0D4599;
+  cursor: pointer;
+}
+.loans__product--finance-container-bottom > div > img {
+  margin: 0 auto;
+  width: 12rem;
+  display: block;
 }
 
 * {

@@ -8,24 +8,24 @@ const Footer = () => {
       <hr />
       <div className="footer__list">
         <ul className="footer__list--container">
-          <li className="footer__list--container-item">About</li>
-          <li className="footer__list--container-item">Zestimates</li>
-          <li className="footer__list--container-item">Research</li>
-          <li className="footer__list--container-item">Careers</li>
-          <li className="footer__list--container-item">Help</li>
-          <li className="footer__list--container-item">Advertise</li>
-          <li className="footer__list--container-item">Fair Housing Guide</li>
-          <li className="footer__list--container-item">Terms of use</li>
-          <li className="footer__list--container-item">Privacy Portal</li>
-          <li className="footer__list--container-item">Cookie Preference</li>
-          <li className="footer__list--container-item">Blog</li>
-          <li className="footer__list--container-item">AI</li>
-          <li className="footer__list--container-item">Mobile Apps</li>
-          <li className="footer__list--container-item">Trulia</li>
-          <li className="footer__list--container-item">StreetEasy</li>
-          <li className="footer__list--container-item">HotPads</li>
-          <li className="footer__list--container-item">Out East</li>
-          <li className="footer__list--container-item">ShowingTime</li>+
+          <li className="footer__list--container-item"><a href="#">About</a></li>
+          <li className="footer__list--container-item"><a href="#">Zestimates</a></li>
+          <li className="footer__list--container-item"><a href="#">Research</a></li>
+          <li className="footer__list--container-item"><a href="#">Careers</a></li>
+          <li className="footer__list--container-item"><a href="#">Help</a></li>
+          <li className="footer__list--container-item"><a href="#">Advertise</a></li>
+          <li className="footer__list--container-item"><a href="#">Fair Housing Guide</a></li>
+          <li className="footer__list--container-item"><a href="#">Terms of use</a></li>
+          <li className="footer__list--container-item"><a href="#">Privacy Portal</a></li>
+          <li className="footer__list--container-item"><a href="#">Cookie Preference</a></li>
+          <li className="footer__list--container-item"><a href="#">Blog</a></li>
+          <li className="footer__list--container-item"><a href="#">AI</a></li>
+          <li className="footer__list--container-item"><a href="#">Mobile Apps</a></li>
+          <li className="footer__list--container-item"><a href="#">Trulia</a></li>
+          <li className="footer__list--container-item"><a href="#">StreetEasy</a></li>
+          <li className="footer__list--container-item"><a href="#">HotPads</a></li>
+          <li className="footer__list--container-item"><a href="#">Out East</a></li>
+          <li className="footer__list--container-item"><a href="#">ShowingTime+</a></li>
         </ul>
       </div>
       <div className="footer__link">
