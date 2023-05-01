@@ -1,5 +1,5 @@
-{
-  "features": [
+export const Data = {
+  features: [
     {
       "properties": {
         "ID": 1,
@@ -9,10 +9,10 @@
         "Cost": 2500
       },
       "geometry": {
-        "coordinates": [
-          13.0609681,
-          80.2341533
-        ]
+        "coordinates": {
+          lat: 15.0609681,
+          lng: 50.2341533
+        }
       }
     },
     {
@@ -24,10 +24,10 @@
         "Cost": 3500
       },
       "geometry": {
-        "coordinates": [
-          13.0823077,
-          80.2755486
-        ]
+        "coordinates": {
+          lat: 15.0823077,
+          lng: 1.2755486
+        }
       }
     },
     {
@@ -39,11 +39,11 @@
         "Cost": 4500
       },
       "geometry": {
-        "coordinates": [
-          13.043171,
-          80.2211525
-        ]
+        "coordinates": {
+          lat: 42.043171,
+          lng: 100.2211525
+        }
       }
-    }
+    },
   ]
 }

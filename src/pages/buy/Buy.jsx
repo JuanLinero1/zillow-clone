@@ -1,63 +1,61 @@
-import React from 'react'
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import React, { useEffect, useState } from "react";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import { Data } from "../../../public/assets/realStateInfo";
+import CardBuy from "./components/CardBuy";
 
 const Buy = () => {
+  const [coordinates, setCoordinates] = useState({
+    lat: 13.24121,
+    lng: 80.1323,
+  });
+
   const containerStyle = {
-    width: '40rem',
-    height: '100vh'
+    width: "40rem",
+    height: "100vh",
   };
-  
-  const center = {
-    lat: -3.745,
-    lng: -38.523
-  };
+
+  const center = { lat: coordinates.lat, lng: coordinates.lng };
 
   const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: import.meta.env.VITE_REACT_MAP_KEY
-  })
-  const [map, setMap] = React.useState(null)
+    id: "google-map-script",
+    googleMapsApiKey: import.meta.env.VITE_REACT_MAP_KEY,
+  });
+  const [map, setMap] = React.useState(null);
   const onLoad = React.useCallback(function callback(map) {
-    // This is just an example of getting and using the map instance!!! don't just blindly copy!
-    const bounds = new window.google.maps.LatLngBounds(center);
-    map.fitBounds(bounds);
+    const myLatLng = { lat: coordinates.lat, lng: coordinates.lng };
 
-    setMap(map)
-  }, [])
+    new google.maps.Marker({
+      position: myLatLng,
+      map,
+      title: "house",
+    });
+
+    setMap(map);
+  }, []);
   const onUnmount = React.useCallback(function callback(map) {
-    setMap(null)
-  }, [])
+    setMap(null);
+  }, []);
 
   return (
-    <section className='buy'>
-      <nav className='buy__header'>
-        <div className="buy__header--container">
-          <form className="buy__header--container-form">
-            <input type="text" />
-          </form>
+    <section className="buy">
+      <nav className="buy__header"></nav>
+      <div className="buy__content">
+        <div className="buy__content--map">
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={10}
+            onLoad={onLoad}
+            onUnmount={onUnmount}
+          >
+            {/* Child components, such as markers, info windows, etc. */}
+            <></>
+          </GoogleMap>
         </div>
-        <div className="buy__header--container">
-          <h4></h4>
-          <ul>
-            <li></li>
-          </ul>
-        </div>
-      </nav>
-      <div className="buy__map">
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={10}
-        onLoad={onLoad}
-        onUnmount={onUnmount}
-      >
-        { /* Child components, such as markers, info windows, etc. */ }
-        <></>
-      </GoogleMap>
+        <CardBuy data={Data} setCoordinates={setCoordinates} />
       </div>
-      <div className="buy__product"></div>
     </section>
-  )
-}
+  );
+};
 
-export default Buy
+export default Buy;
