@@ -5,7 +5,6 @@ const header = () => {
   const [condition, setCondition] = useState(false);
   const [logCondition, setLogCondition] = useState(false);
   const [email, setEmail] = useState("");
-  console.log(email)
 
   return (
     <header className="header">
@@ -37,7 +36,7 @@ const header = () => {
           <a className="header__nav--list-item" href="#">
             <li>Manage Rentals</li>
           </a>
-          <a className="header__nav--list-item" href="#">
+          <a className="header__nav--list-item" href="/inattendu">
             <li>Advertise</li>
           </a>
           <a className="header__nav--list-item" href="#">
