@@ -11,6 +11,7 @@ import Home from "./pages/home/Home";
 import Sell from "./pages/sell/Sell";
 import Buy from "./pages/buy/Buy";
 import Loans from "./pages/loans/Loans";
+import Inattendu from "./pages/inattendu/inattendu";
 
 function App() {
   const AppWrapper = () => {
@@ -19,6 +20,7 @@ function App() {
       { path: "/Sell", element: <Sell /> },
       { path: "/Buy", element: <Buy /> },
       { path: "/Home-Loans", element: <Loans /> },
+      { path: "/inattendu", element: <Inattendu /> },
     ]);
     return routes;
   };
